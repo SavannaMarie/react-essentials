@@ -13,9 +13,13 @@ function Main(props){
     return (
         <section>
             <p>{props.adjective} Mexican food!</p>
+            {/*<ul>*/}
+            {/*    {props.dishes.map} =>*/}
+            {/*</ul>*/}
         </section>
     );
 }
+
 
 function Footer(props){
     return (
@@ -25,6 +29,13 @@ function Footer(props){
     );
 }
 
+const dishes = [
+    "Enchiladas",
+    "Mac and cheese",
+    "Spaghetti"
+]
+
+dishes.map((dish) => console.log(dish));
 
 function App() {
   return (
