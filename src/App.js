@@ -13,9 +13,9 @@ function Main(props){
     return (
         <section>
             <p>{props.adjective} Mexican food!</p>
-            {/*<ul>*/}
-            {/*    {props.dishes.map} =>*/}
-            {/*</ul>*/}
+            <ul style={{textAlign: "left"}}>
+                {props.dishes.map((dish) => <li>{dish}</li>)}
+            </ul>
         </section>
     );
 }
@@ -35,13 +35,11 @@ const dishes = [
     "Spaghetti"
 ]
 
-dishes.map((dish) => console.log(dish));
-
 function App() {
   return (
     <div className="App">
       <Header name="Mark" />
-      <Main adjective="Amazing"/>
+      <Main adjective="Amazing" dishes={dishes}/>
       <Footer year={new Date().getFullYear()}/>
     </div>
   );
