@@ -14,7 +14,8 @@ function Main(props){
         <section>
             <p>{props.adjective} Mexican food!</p>
             <ul style={{textAlign: "left"}}>
-                {props.dishes.map((dish) => <li>{dish}</li>)}
+                {props.dishes.map((dish, i) => (
+                    <li key={i}>{dish}</li>))}
             </ul>
         </section>
     );
@@ -33,7 +34,11 @@ const dishes = [
     "Enchiladas",
     "Mac and cheese",
     "Spaghetti"
-]
+];
+
+const dishObjects = dishes.map((dish, i) => ({id: i, title: dish}))
+console.log(dishObjects);
+
 
 function App() {
   return (
